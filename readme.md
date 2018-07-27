@@ -78,3 +78,18 @@ type Kim {
 }
 
 webtoons 로 변경
+파라미터 전달하기 filtered data
+-> argument 전달
+-> limit
+
+Graphql은 필요없다. (url / parameter / form-data / body-parse..)
+resolver에서 필요한 어떤 동작이든 가능하다.(데이터베이스, api호출, 파일접근, rest-api호출.....)
+Django? View, URL, Parameter
+
+#Mutation
+
+deleteWebToon
+addWebToon
+
+
+

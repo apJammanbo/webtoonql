@@ -675,6 +675,35 @@ let webtoons = [{
   }
 ];
 
-export const getWebtoons = () => {
-    return webtoons;
+export const getWebtoons = limit => {
+    if(limit > webtoons.length) {
+        return webtoons;
+    } else {
+        return webtoons.splice(0, limit);
+    }
   }; 
+
+export const getWebtoon = uid => {
+    const filteredWebtoon = webtoons.filter(webtoon => webtoon.uid === uid);
+    return filteredWebtoon[0];
+}
+
+export const deleteWebtoon = uid => {
+    const cleanedWebtoons = webtoons.filter(webtoon => webtoon.uid !== uid);
+    if(cleanedWebtoons.length !== webtoons) {
+        webtoons = cleanedWebtoons;
+        return true;
+    } else {
+        return false;
+    }
+}
+
+export const addWebtoon = (title, author) => {
+    let addWebtoon = {
+        uid: webtoons.length + 1,
+        title,
+        author,
+    }
+    webtoons.push(addWebtoon);
+    return addWebtoon;
+}

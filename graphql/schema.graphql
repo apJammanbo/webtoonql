@@ -1,9 +1,17 @@
 type Webtoon {
+    uid: Int!,
     title: String!,
     read_count: Int!,
-    type: String!,
+    sub_category_title: String!,
+    author: String!,
 }
 
 type Query {
-    webtoons: [Webtoon],
+    webtoon(uid:Int!): Webtoon,
+    webtoons(limit: Int!): [Webtoon]!,
+}
+
+type Mutation {
+    addWebtoon(title:String!, author:String!): Webtoon!,
+    deleteWebtoon(uid:Int!): Boolean!,
 }
