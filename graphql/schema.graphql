@@ -4,6 +4,8 @@ type Webtoon {
     read_count: Int!,
     sub_category_title: String!,
     author: String!,
+    caption: String!,
+    image: String!,
 }
 
 type Query {
