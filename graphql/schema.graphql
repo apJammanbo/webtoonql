@@ -11,6 +11,7 @@ type Webtoon {
 type Query {
     webtoon(uid:Int!): Webtoon,
     webtoons(limit: Int!): [Webtoon]!,
+    sameTypeWebtoons(uid:Int!): [Webtoon]!,
 }
 
 type Mutation {

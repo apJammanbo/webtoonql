@@ -707,3 +707,10 @@ export const addWebtoon = (title, author) => {
     webtoons.push(addWebtoon);
     return addWebtoon;
 }
+
+export const getSameTypeWebtoons = uid => {
+    let type = webtoons.filter(webtoon => webtoon.uid === uid)[0].type;
+    return webtoons.filter(webtoon => {
+        return webtoon.type === type && webtoon.uid !== uid;
+    }); 
+}
