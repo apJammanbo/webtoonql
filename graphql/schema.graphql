@@ -1,0 +1,9 @@
+type Webtoon {
+    title: String!,
+    read_count: Int!,
+    type: String!,
+}
+
+type Query {
+    webtoons: [Webtoon],
+}
