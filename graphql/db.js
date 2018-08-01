@@ -676,11 +676,7 @@ let webtoons = [{
 ];
 
 export const getWebtoons = limit => {
-    if(limit > webtoons.length) {
-        return webtoons;
-    } else {
-        return webtoons.splice(0, limit);
-    }
+    return webtoons;
   }; 
 
 export const getWebtoon = uid => {
